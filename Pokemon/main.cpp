@@ -30,5 +30,12 @@ int main()
         cout << "Invalid choice. Please restart the game and choose a valid Pokémon." << endl;
     }
 
+    cout<<"Ah, an excellent choice!\n";
+    cout<<"But beware, Trainer,\n";
+    cout<<"this is only the beginning.\n";
+    cout<<"Your journey is about to unfold.\n";
+    cout<<"Now let’s see if you’ve got what it takes to keep going!\n";
+    cout<<"Good luck, and remember… Choose wisely!\n";
+
     return 0;
 }
