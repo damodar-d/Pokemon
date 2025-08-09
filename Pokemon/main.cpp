@@ -2,12 +2,21 @@
 #include <string>
 using namespace std;
 
-enum PokemonChoice
+enum class PokemonChoice
 {
     BULBASAUR = 1,
     CHARMANDER,
     SQUIRTLE,
     INVALID
+};
+
+enum class PokemonType
+{
+    FIRE,
+    ELECTRIC,
+    WATER,
+    EARTH,
+    NORMAL,
 };
 
 void seperate()
@@ -19,7 +28,7 @@ int main()
 {
 
     string playerName;
-    PokemonChoice chosenPokemon = INVALID;
+    PokemonChoice chosenPokemon = PokemonChoice::INVALID;
 
     cout << "Professor Oak: Hello there! Welcome to the world of Pokemon!\n";
     cout << "Professor Oak: My name is Oak. People call me the Pokemon "
@@ -47,29 +56,31 @@ int main()
     switch (choice)
     {
     case 1:
-        chosenPokemon = BULBASAUR;
+        chosenPokemon = PokemonChoice::BULBASAUR;
         cout << "You have chosen Bulbasaur! A grass-type Pokémon." << endl;
         break;
 
     case 2:
-        chosenPokemon = CHARMANDER;
+        chosenPokemon = PokemonChoice::CHARMANDER;
         cout << "You have chosen Charmander! A fire-type Pokémon." << endl;
         break;
 
     case 3:
-        chosenPokemon = SQUIRTLE;
+        chosenPokemon = PokemonChoice::SQUIRTLE;
         cout << "You have chosen Squirtle! A water-type Pokémon." << endl;
         break;
 
     default:
-        chosenPokemon = CHARMANDER;
+        chosenPokemon = PokemonChoice::CHARMANDER;
         cout << "Hmm... You made an invalid choice. Anyways, I am assigning you Charmrander as your Pokemon friend.\n"
              << endl;
         break;
     }
     cout << "Ah, an excellent choice!\n\n";
 
-    cout << "Professor Oak: " << (chosenPokemon == BULBASAUR ? "Balbasaur" : chosenPokemon == CHARMANDER ? "Charmander": "Squirtle")<< " and you, "
+    cout << "Professor Oak: " << (chosenPokemon == PokemonChoice::BULBASAUR ? "Balbasaur" : chosenPokemon == PokemonChoice::CHARMANDER ? "Charmander"
+                                                                                                                                       : "Squirtle")
+         << " and you, "
          << playerName << ", are going to be the best of friends!\n";
     seperate();
     cout << "Professor Oak: Your journey begins now! Get ready to explore "
