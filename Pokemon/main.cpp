@@ -18,24 +18,33 @@ int main()
     cout << "Which Pokémon would you like to choose? Enter the number: ";
 
     int choice;
-    cin >> choice;  
+    cin >> choice;
 
-    if(choice == 1) {
+    switch (choice)
+    {
+    case 1:
         cout << "You have chosen Bulbasaur! A grass-type Pokémon." << endl;
-    } else if(choice == 2) {
+        break;
+
+    case 2:
         cout << "You have chosen Charmander! A fire-type Pokémon." << endl;
-    } else if(choice == 3) {
+        break;
+
+    case 3:
         cout << "You have chosen Squirtle! A water-type Pokémon." << endl;
-    } else {
+        break;
+
+    default:
         cout << "Invalid choice. Please restart the game and choose a valid Pokémon." << endl;
+        break;
     }
 
-    cout<<"Ah, an excellent choice!\n";
-    cout<<"But beware, Trainer,\n";
-    cout<<"this is only the beginning.\n";
-    cout<<"Your journey is about to unfold.\n";
-    cout<<"Now let’s see if you’ve got what it takes to keep going!\n";
-    cout<<"Good luck, and remember… Choose wisely!\n";
+    cout << "Ah, an excellent choice!\n";
+    cout << "But beware, Trainer,\n";
+    cout << "this is only the beginning.\n";
+    cout << "Your journey is about to unfold.\n";
+    cout << "Now let’s see if you’ve got what it takes to keep going!\n";
+    cout << "Good luck, and remember… Choose wisely!\n";
 
     return 0;
 }
